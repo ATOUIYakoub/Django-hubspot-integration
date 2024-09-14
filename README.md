@@ -1,5 +1,5 @@
 # Django-hubspot-integration
-This project integrates Django with HubSpot to manage CRM functionalities. It provides a seamless way to synchronize data between your Django application and HubSpot.
+This project integrates an external advanced CRM API system of HubSpot with Django Rest Framework. It provides a seamless way to synchronize data between your Django application and HubSpot.
 
 ## Features
 
