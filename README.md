@@ -27,7 +27,7 @@ cd Django-hubspot-integration
 docker-compose up --build
 ```
 
-This will build and run the Docker containers required for the project. Once the containers are up and running, you can access the application at `http://localhost:8000`.
+This will build and run the Docker containers required for the project. Once the containers are up and running, you can access the application at SWAGGER `http://localhost:8000/api/schema/docs`.
 
 ### Stop the Containers
 
@@ -41,10 +41,11 @@ docker-compose down
 
 Make sure to create a `.env` file in the root directory of the project and add the following variables:
 
-```
-HUBSPOT_API_KEY=YOUR_HUBSPOT_API_KEY
+```properties
 SECRET_KEY=YOUR_SECRET_KEY
+HUBSPOT_CLIENT_SECRET=YOUR_HUBSPOT_CLIENT_SECRET
+HUBSPOT_REDIRECT_URI=http://localhost:8000/oauth/callback
+HUBSPOT_ACCESS_TOKEN=YOUR_HUBSPOT_ACCESS_TOKEN
 ```
 
-Replace `YOUR_HUBSPOT_API_KEY` with your actual HubSpot API key and `YOUR_SECRET_KEY` with your own secret key.
-
+Replace `YOUR_SECRET_KEY` with your own secret key, `YOUR_HUBSPOT_CLIENT_SECRET` with your HubSpot client secret, `http://localhost:8000/oauth/callback` with your HubSpot redirect URI, and `YOUR_HUBSPOT_ACCESS_TOKEN` with your HubSpot access token.
